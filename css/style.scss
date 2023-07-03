@@ -1,0 +1,1008 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap');
+
+@font-face {
+	font-family: 'Aleo';
+	src: url(/fonts/AlegreyaSans-Medium.ttf); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+*{
+    padding: 0;
+
+}
+
+@import "_mixins.scss";
+
+.conteiner{
+ max-width: 1420px;
+ width: 100%; 
+ margin: 0 auto; 
+}
+
+.line{
+    width: 100% ;
+}
+.nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &_center{
+        display: flex;
+    }
+
+    &_right{
+        display: flex;
+        
+    }
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    ul{
+        
+    }
+    li{
+       list-style: none;
+       margin-right: 20px;
+       a{
+        font-family:"Alegreya Sans";
+        font-weight: 500;
+        color: black;
+        font-size: 27px;
+       }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.slider{
+    display: flex;
+    margin-top: 140px;
+
+    &_left{
+        background-color: #497800;
+        border-radius: 25px 0px 0px 25px;
+        width: 720px;
+        height: 480px;
+        display: flex;
+
+        &_cnopka{
+            display: flex;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        h1{
+            margin-left: 40px;
+            font-family: 'Aleo';
+            font-weight: 400;
+            font-size: 50px;
+            color: #FFFFFF;
+            margin-top: 90px;
+            width: 400px;
+        }
+
+        p{
+            margin-left: 40px;
+            font-family: 'Aleo';
+            font-weight: 400;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+
+        img{
+            margin-left: 40px;
+            margin-top: 100px;
+        }
+    }
+
+    &_right{
+        display: flex;
+        a{
+            margin-left: -20px;
+        }
+    }
+    
+}
+
+
+
+
+
+
+.item {
+    color: white;
+}
+.previous, .next {
+    align-self: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow_mobile {
+    display: none;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@media only screen and (max-width: 480px) {
+.conteiner {
+max-width: 100%;
+padding: 0 20px;
+}
+.line {
+    width: 100%;
+}
+
+.nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &_center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &_right {
+        display: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        font-size: 20px;
+    }
+}
+
+.slider {
+    margin-top: 80px;
+
+    &_left {
+        border-radius: 25px;
+        width: 100%;
+        height: 300px;
+
+        h1 {
+            font-size: 40px;
+            margin-top: 60px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        img {
+            margin-left: 20px;
+            margin-top: 70px;
+            width: 200px;
+        }
+    }
+
+    &_right {
+        a {
+            margin-left: 0;
+        }
+    }
+}
+
+.arrow_mobile {
+    display: block;
+    align-self: center;
+    margin-top: 10px;
+}
+}
+
+
+
+.info{
+    background-image: url(../img/inf.png);
+    background-repeat: no-repeat;
+    width: 1460px;
+    height: 612px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 140px;
+
+    .text{
+        &_logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+
+            p{
+                font-family: 'Aleo';
+                font-size: 35px;
+                color: #FFFFFF;
+                font-weight: 400;
+            }
+        }
+
+        &_h1{
+            padding-top: 140px;
+
+            h1{
+                font-family: 'Aleo';
+                font-size: 67px;
+                color: #FFFFFF;
+                margin: auto;
+                font-weight: 400;
+        
+            }
+        }
+    }
+
+
+
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    &_card{
+        width: 320px;
+        height: 490px;
+        background: #FFFFFF;
+        box-shadow: 4px 5px 22px 7px #878686;
+        border-radius: 25px;
+        margin-right: 45px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        &__top{
+            overflow: hidden;
+
+            p{
+                font-family: 'Alegreya Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 27px;
+                line-height: 32px;
+                color: #000000;
+            }
+        }
+        .card_line{
+            width: 261px;
+            border: 1px solid #878686;
+        }
+        &_bottom{
+            &_add{
+                width: 216px;
+                height: 55px;
+                background: #497800;
+                
+            }
+            &__top{
+                p{
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 27px;
+                    line-height: 32px;
+                    color: #000000;
+                    margin: 3px;
+                }
+            }
+        }
+    }
+}
+
+.card_add{
+    margin-top: 15px;
+    width: 216px;
+    height: 55px;
+    background: #497800;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Alegreya Sans';
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.gs_cart{
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 140px;
+}
+
+.foot{
+
+    &_top{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    
+        p{
+            font-family: 'Alegreya Sans';
+            font-weight: 500;
+            font-size: 27px;
+            line-height: 32px;
+            color: #545151;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+  .info {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+
+    .text {
+      &_h1 {
+        padding-top: 60px;
+
+        h1 {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+
+    &_card {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 30px;
+
+      .card_line {
+        width: 80%;
+      }
+
+      &_bottom {
+        &_add {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .gs_cart {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .info {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+
+    .text {
+      &_h1 {
+        padding-top: 80px;
+
+        h1 {
+          font-size: 54px;
+        }
+      }
+    }
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+
+    &_card {
+      width: 45%;
+      height: auto;
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      .card_line {
+        width: 80%;
+      }
+
+      &_bottom {
+        &_add {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .gs_cart {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+/*------------------*/
+
+.bakale{
+
+    &_card{
+        display: flex;
+        justify-content: center;
+    }
+    &_text{
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 66px;
+        color: #545151;
+    }
+}
+
+
+.catalog{
+    h1{
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 66px;
+        color: #000000;
+
+    }
+}
+
+
+/*------------------*/
+
+.kontakt{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-bottom: 130px;
+    h1{
+        text-align: center;
+        font-family: 'Alegreya Sans';
+        font-weight: 500;
+        font-size: 50px;
+        color: #000000;
+        margin: 0;
+    }
+    &_inf{
+        &_new{
+            display: flex;
+            align-items: center;
+
+            p{
+                font-family: 'Alegreya Sans';
+                font-weight: 500;
+                font-size: 36px;
+                color: #000000;
+                margin-left: 40px;
+            }
+        }
+    }   
+    }
+
+
+.avto{
+    
+}
+
+
+
+
+
+// Модалка 
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y:auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s,visibility .4s ;
+    
+}
+
+.modal-box{
+    max-width: 608px;
+    padding: 20px;
+    z-index: 1;
+    background: #ECEBEB;
+    border-radius: 20px;
+    transform: scale(0);
+    transition: transform .8s ;
+
+    & h2{
+        color: #000;
+        font-size: 30px;
+        font-family: Alegreya Sans;
+        font-weight: 500;
+    }
+
+    & p{
+        color: #878686;
+        font-size: 30px;
+        font-family: Alegreya Sans;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+}
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.modal.open .modal-box{
+    transform: scale(1);
+}
+
+.close-modal{
+    border: none;
+    background-color: transparent;
+}
+
+
+.enter{
+    display: flex;
+    justify-content: center;
+    margin-top: 134px;
+    margin-bottom: 134px;
+    button{
+        width: 399px;
+        height: 205px;
+        background: #497800;
+        border-radius: 20px;
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 60px;
+        border: none;
+    }
+
+    &_btn2{
+        margin-left: 40px;
+    }
+
+
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+}
+
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 134px;
+    margin-bottom: 134px;
+    &_right{
+
+        h1{
+            color: #000;
+            font-size: 48px;
+            font-family: Alegreya Sans;
+            font-weight: 500;
+        }
+
+        &_input{
+            border-radius: 10px;
+            border: none;
+            background: #D9D9D9;
+            width: 698px;
+            height: 75px;
+
+        }
+
+        &_button{
+            border-radius: 10px;
+            background: #497800;
+            width: 698px;
+            height: 75px;
+            border: none;
+            color: #FFF;
+            font-size: 48px;
+            font-family: Alegreya Sans;
+            font-weight: 500;
+        }
+
+        p{
+            color: #878686;
+            font-size: 30px;
+            font-family: Alegreya Sans;
+            font-weight: 500;
+        }
+    }
+}
+
+
+.lkinfo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 135px;
+    margin-bottom: 135px;
+
+    &_left{
+        width: 399px;
+        height: 490px;
+        border-radius: 20px;
+        background: #497800;
+        
+
+        &_center{
+            height: 170px;
+                color: white;
+                font-size: 35px;
+                font-family: Alegreya Sans;
+                margin-left: 35px;
+            &_kor{
+                align-items: center;
+                display: flex;
+            }  
+            
+            a{
+                text-decoration: none;
+                color: white;
+                margin-left: 10px;
+            }
+        }
+
+        &_enter{
+            align-items: center;
+            display: flex;
+            color: white;
+            font-size: 35px;
+            font-family: Alegreya Sans;
+            margin-left: 35px;
+            margin-top: 90px;
+
+            a{
+                text-decoration: none;
+                color: white;
+                margin-left: 10px;
+            }
+        }
+
+        &_fio{
+            color: #FFF;
+font-size: 40px;
+font-family: Alegreya Sans;
+font-weight: 500;
+display: flex;
+justify-content: center;
+        }
+    }
+}
+
+
+/**
+ * Tabs
+ */
+ .tabs {
+	display: flex;
+	flex-wrap: wrap; // make sure it wraps
+}
+.tabs label {
+	order: 1; // Put the labels first
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background: #fff;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/**
+ * Generic Styling
+*/
+
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+
+
+/* Create an active/current "tab button" class */
+
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+
+}
+
+@media screen and (max-width: 420px) {
+    .bakale_card {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .bakale_text {
+      font-family: 'Alegreya Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 50px;
+      color: #545151;
+    }
+    
+    .catalog h1 {
+      font-size: 25px;
+      line-height: 50px;
+    }
+    
+    .kontakt h1 {
+      font-size: 35px;
+      line-height: 50px;
+    }
+    
+    .kontakt_inf_new p {
+      font-size: 30px;
+      margin-left: 20px;
+    }
+    
+    .enter button {
+      width: 299px;
+      height: 155px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    
+    .login_right h1 {
+      font-size: 40px;
+    }
+    
+    .login_right_input {
+      width: 499px;
+      height: 55px;
+    }
+    
+    .login_right_button {
+      width: 499px;
+      height: 55px;
+      font-size: 40px;
+    }
+    
+    .lkinfo_left {
+      width: 299px;
+      height: 350px;
+    }
+    
+    .lkinfo_left_center {
+      height: 120px;
+      font-size: 25px;
+      margin-left: 25px;
+    }
+    
+    .lkinfo_left_center_kor a {
+      margin-left: 5px;
+    }
+    
+    .lkinfo_left_enter {
+      font-size: 25px;
+      margin-left: 25px;
+      margin-top: 70px;
+    }
+    
+    .lkinfo_left_enter a {
+      margin-left: 5px;
+    }
+    
+    .lkinfo_left_fio {
+      font-size: 30px;
+    }
+    
+    .tabs label {
+      padding: 0.8rem 1.5rem;
+      font-size: 20px;
+    }
+    
+    .tabs .tab {
+      padding: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .bakale_card {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .bakale_text {
+      font-family: 'Alegreya Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 66px;
+      color: #545151;
+    }
+    
+    .catalog h1 {
+      font-size: 35px;
+      line-height: 66px;
+    }
+    
+    .kontakt h1 {
+      font-size: 50px;
+      line-height: 66px;
+    }
+    
+    .kontakt_inf_new p {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+    
+    .enter button {
+      width: 399px;
+      height: 205px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    
+    .login_right h1 {
+      font-size: 48px;
+    }
+    
+    .login_right_input {
+        width: 698px;
+        height: 75px;
+    }
+  
+    .login_right_button {
+        width: 698px;
+        height: 75px;
+        font-size: 48px;
+    }
+  
+    .lkinfo_left {
+        width: 399px;
+        height: 490px;
+    }
+  
+    .lkinfo_left_center {
+        height: 170px;
+        font-size: 35px;
+        margin-left: 35px;
+    }
+  
+    .lkinfo_left_center_kor a {
+        margin-left: 10px;
+    }
+  
+    .lkinfo_left_enter {
+        align-items: center;
+        display: flex;
+        color: white;
+        font-size: 35px;
+        font-family: 'Alegreya Sans';
+        margin-left: 35px;
+        margin-top: 90px;
+    }
+  
+    .lkinfo_left_enter a {
+        margin-left: 10px;
+    }
+  
+    .lkinfo_left_fio {
+        color: #FFF;
+        font-size: 40px;
+        font-family: 'Alegreya Sans';
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+    }
+  
+    .tabs label {
+        order: 1;
+        display: block;
+        padding: 1rem 2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+        background: #90CAF9;
+        font-weight: bold;
+        transition: background ease 0.2s;
+    }
+  
+    .tabs .tab {
+        order: 99;
+        flex-grow: 1;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        background: #fff;
+    }
+  
+    .tabs input[type="radio"] {
+        display: none;
+    }
+  
+    .tabs input[type="radio"]:checked + label {
+        background: #fff;
+    }
+  
+    .tabs input[type="radio"]:checked + label + .tab {
+        display: block;
+    }
+}
